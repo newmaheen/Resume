@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>test</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="registration.js"></script>
+</head>
+<body>
+	<div class ="login-page">
+		<div class="form1">
+			<form name="myform" class="register-form">
+				<input type="text" placeholder="name" name="fullname" onchange="return validateformforname();" required />	
+		    	<input type="text" placeholder="email" required/>	
+		    	<input type="text" placeholder="password" name="pass1" required/>	
+		    	<input type="text" placeholder="repassword" name="pass2" onchange="return validateformforpass();" required/>	
+		    	<input type="text" placeholder="phone"required/>
+		        <input type="number" placeholder="age" name="age" onchange="return validateformforage();" required/>	
+	
+		    	<input type="text" placeholder="address"required/>	
+		    	<input type="text" placeholder="zip" required/>	
+		    	<input type="checkbox" name="agree" id="agree"  > accepts the terms and conditions 
+		    	<button onclick=" return validateformforacceptation();">Create</button>
+		    	<p class="message"> Already Registered? <a href="#"> Login</a></p>
+			</form>
+
+			<form class="login-form">
+				<input type="text" placeholder="username"/>
+				<input type="text" placeholder="password"/>
+				<button>Login</button>
+				<p class="message"> Not Registered? <a href="#">Register</a></p>
+			</form>
+
+		</div>
+	</div>
+
+	<script src='https://code.jquery.com/jquery-3.4.1.min.js'>
+		
+	</script>
+
+	<script>
+		$('.message a').click(function(){
+		$('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+		});
+		
+	</script>
+
+
+</body>
+</html>
